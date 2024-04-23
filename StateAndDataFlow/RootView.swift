@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RootView: View {
     @EnvironmentObject private var loginViewVM: LoginViewViewModel
-    private let storageManager = StorageManager.shared
 
     var body: some View {
         if loginViewVM.isLoggedIn {
