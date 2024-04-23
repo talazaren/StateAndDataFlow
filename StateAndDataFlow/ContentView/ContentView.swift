@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject private var contentViewVM: ContentViewViewModel
     @EnvironmentObject private var loginViewVM: LoginViewViewModel
+    
     private let storageManager = StorageManager.shared
     
     var body: some View {
@@ -61,7 +62,7 @@ struct ContentView: View {
 }
 
 struct ButtonView: View {
-    @ObservedObject var contentViewVM: ContentViewViewModel
+    var contentViewVM: ContentViewViewModel
     
     var body: some View {
         Button(action: contentViewVM.startTimer) {

@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct StateAndDataFlowApp: App {
-    @StateObject private var contentViewVM = ContentViewViewModel()
+    @State private var contentViewVM = ContentViewViewModel()
     @StateObject private var loginViewVM = LoginViewViewModel()
     
     var body: some Scene {

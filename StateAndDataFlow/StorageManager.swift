@@ -22,8 +22,7 @@ final class StorageManager: ObservableObject {
     }
 
     func loadData() -> (String, Bool) {
-        print(isRegistered)
-        return (username, isRegistered)
+        (username, isRegistered)
     }
     
     func deleteData() {
