@@ -16,7 +16,7 @@ struct StateAndDataFlowApp: App {
         WindowGroup {
             RootView()
         }
-        .environmentObject(contentViewVM)
+        .environment(contentViewVM)
         .environmentObject(loginViewVM)
     }
 }

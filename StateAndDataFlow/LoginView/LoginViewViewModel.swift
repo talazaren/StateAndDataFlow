@@ -8,6 +8,13 @@
 import Foundation
 
 final class LoginViewViewModel: ObservableObject {
-    @Published var name = StorageManager.shared.loadData().0
-    @Published var isLoggedIn = StorageManager.shared.loadData().1
+    private let storageManager = StorageManager.shared
+    
+    @Published var name = ""
+    @Published var isLoggedIn = false
+    
+    init() {
+        name = storageManager.getName
+        isLoggedIn = storageManager.getStatus
+    }
 }

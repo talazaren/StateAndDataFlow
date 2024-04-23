@@ -14,15 +14,19 @@ final class StorageManager: ObservableObject {
     @AppStorage("username") private var username: String = ""
     @AppStorage("isRegistered") private var isRegistered: Bool = false
     
+    var getName: String {
+        username
+    }
+    
+    var getStatus: Bool {
+        isRegistered
+    }
+    
     private init() {}
     
     func saveData(loginViewVM: LoginViewViewModel) {
         username = loginViewVM.name
         isRegistered = loginViewVM.isLoggedIn
-    }
-
-    func loadData() -> (String, Bool) {
-        (username, isRegistered)
     }
     
     func deleteData() {

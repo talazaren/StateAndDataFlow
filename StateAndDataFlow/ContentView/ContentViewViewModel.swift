@@ -9,7 +9,7 @@ import Foundation
 import Observation
 
 @Observable
-final class ContentViewViewModel: ObservableObject {
+final class ContentViewViewModel {
     var counter = 3
     var buttonTitle = "Start"
     

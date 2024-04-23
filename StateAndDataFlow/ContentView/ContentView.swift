@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject private var contentViewVM: ContentViewViewModel
+    @Environment(ContentViewViewModel.self) private var contentViewVM
     @EnvironmentObject private var loginViewVM: LoginViewViewModel
     
     private let storageManager = StorageManager.shared
     
     var body: some View {
         VStack {
-            Text("Hi, \(storageManager.loadData().0)!")
+            Text("Hi, \(storageManager.getName)!")
                 .font(.title)
                 .padding(.top, 100)
             
@@ -57,7 +57,7 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environmentObject(ContentViewViewModel())
+        .environment(ContentViewViewModel())
         .environmentObject(LoginViewViewModel())
 }
 
